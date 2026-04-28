@@ -1,17 +1,352 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import {
+    tiers,
+    addOns,
+    audienceCompanies,
+    pastStats,
+    reachStats,
+    eventDetails,
+} from "../data/sponsorship";
 
+const tierAccent: Record<string, string> = {
+    platinum: "from-cream-warm/15 to-cream-warm/0 border-cream-warm/30",
+    gold: "from-accent/10 to-accent/0 border-accent/30",
+    silver: "from-white/5 to-white/0 border-white/15",
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+    <Header />
+
+    <!-- Hero -->
+    <section class="relative">
+        <div
+            class="mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-end px-8 pb-20 pt-16 md:pt-28"
+        >
+            <div class="small-headline mb-4">/lisbon-ai-2026 · sponsors</div>
+            <h1 class="big-headline">
+                SPONSOR<br />THE ROOM<br />THAT BUILDS AI.
+            </h1>
+            <div class="mt-8 mb-6 max-w-xl text-xl leading-snug text-muted">
+                2 days. 400 builders. Champalimaud, Belém.<br />
+                September 23 – 24, 2026.
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <a href="#tiers" class="tickets-cta">See tiers &rarr;</a>
+                <a
+                    href="mailto:sponsors@lisbonai.xyz?subject=Lisbon%20AI%202026%20sponsorship"
+                    class="rounded-full border border-white/20 px-4 py-2 text-sm text-cream hover:bg-white/5"
+                >
+                    Talk to us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The pitch -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+            <div class="md:col-span-4">
+                <div class="small-headline">/the-pitch</div>
+            </div>
+            <div
+                class="space-y-6 text-xl leading-relaxed md:col-span-8 md:text-2xl"
+            >
+                <p>AI isn't the next big thing &mdash; it <em>is</em> the big thing.</p>
+                <p>
+                    Lisbon AI is the European, builder-first summit for the
+                    people shipping AI in production. No theoretical hype, no
+                    rubber-chicken dinners &mdash; just code, talks, and
+                    hallway hacking.
+                </p>
+                <p>
+                    Sponsoring Lisbon AI puts your brand in the conversation
+                    with the engineers, founders, and researchers actually
+                    building this stuff &mdash; and the much larger online
+                    community that follows them.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2026 details -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+            <div class="md:col-span-4">
+                <div class="small-headline">/2026</div>
+                <p class="mt-3 text-muted">The numbers we're playing with.</p>
+            </div>
+            <dl class="md:col-span-8">
+                {
+                    eventDetails.map((d) => (
+                        <div class="flex items-baseline justify-between border-b border-white/10 py-5">
+                            <dt class="font-mono text-xs uppercase text-muted">
+                                {d.label}
+                            </dt>
+                            <dd class="text-right text-xl md:text-2xl">
+                                {d.value}
+                            </dd>
+                        </div>
+                    ))
+                }
+            </dl>
+        </div>
+    </section>
+
+    <!-- Pillars -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+            <div class="md:col-span-4">
+                <div class="small-headline">/why-it-works</div>
+            </div>
+            <ul class="md:col-span-8 text-xl">
+                <li class="mb-4">
+                    Community-run<br />
+                    <span class="text-muted">
+                        Organized by people who ship for a living. Volunteer-based.
+                    </span>
+                </li>
+                <li class="mb-4 border-t border-white/10 pt-4">
+                    Broad agenda<br />
+                    <span class="text-muted">
+                        Because AI is not just foundational models &mdash; it's
+                        infra, tools, products, and the people building them.
+                    </span>
+                </li>
+                <li class="mb-4 border-t border-white/10 pt-4">
+                    Open-source<br />
+                    <span class="text-muted">
+                        Every speaker presents the code. Every talk is
+                        live-streamed.
+                    </span>
+                </li>
+                <li class="mb-4 border-t border-white/10 pt-4">
+                    Ethical by design<br />
+                    <span class="text-muted">
+                        Code of conduct, diverse curation, scholarships baked in.
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 2025 proof -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto max-w-6xl px-6 py-20">
+            <div class="grid gap-12 md:grid-cols-12">
+                <div class="md:col-span-4">
+                    <div class="small-headline">/proof · 2025</div>
+                    <p class="mt-3 text-muted">
+                        First edition was a sell-out at 109% capacity. Here's
+                        what happened.
+                    </p>
+                </div>
+                <div class="md:col-span-8">
+                    <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+                        {
+                            pastStats.map((s) => (
+                                <div class="rounded-lg border border-white/10 p-5">
+                                    <div class="font-display text-4xl font-bold tracking-tight md:text-5xl">
+                                        {s.value}
+                                    </div>
+                                    <div class="mt-2 text-sm text-cream">
+                                        {s.label}
+                                    </div>
+                                    <div class="mt-1 font-mono text-xs text-faint">
+                                        {s.note}
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <figure class="mt-8 border-t border-white/10 pt-8">
+                        <blockquote class="text-xl leading-relaxed md:text-2xl">
+                            “The schedule was nicely structured, allowing
+                            people to connect with each other, enjoy the
+                            venue and take a break between talks. The venue
+                            was pleasant and food was great. Great MC.”
+                        </blockquote>
+                        <figcaption class="mt-3 font-mono text-xs uppercase text-faint">
+                            &mdash; 2025 attendee
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience: companies -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+            <div class="md:col-span-4">
+                <div class="small-headline">/who-is-in-the-room</div>
+                <p class="mt-3 text-muted">
+                    A sample of companies represented in the 2025 attendee
+                    list.
+                </p>
+                <p class="mt-6 font-mono text-xs uppercase text-faint">
+                    Top geographies
+                </p>
+                <p class="mt-2 text-2xl">🇵🇹 🇬🇧 🇩🇪 🇵🇱 🇺🇸</p>
+            </div>
+            <ul class="md:col-span-8">
+                {
+                    audienceCompanies.map((c) => (
+                        <li class="flex items-baseline justify-between border-b border-white/10 py-4 text-xl md:text-2xl">
+                            <span>{c.name}</span>
+                            <span class="font-mono text-xs text-faint">
+                                {c.note}
+                            </span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+
+    <!-- Reach -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto max-w-6xl px-6 py-20">
+            <div class="grid gap-12 md:grid-cols-12">
+                <div class="md:col-span-4">
+                    <div class="small-headline">/reach</div>
+                    <p class="mt-3 text-muted">
+                        400 builders in the room. Thousands more watching
+                        online &mdash; on the platforms where the right
+                        builders actually are.
+                    </p>
+                </div>
+                <div class="md:col-span-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+                    {
+                        reachStats.map((s) => (
+                            <div class="rounded-lg border border-white/10 p-5">
+                                <div class="font-display text-4xl font-bold tracking-tight md:text-5xl">
+                                    {s.value}
+                                </div>
+                                <div class="mt-2 text-sm">{s.label}</div>
+                                <div class="mt-1 font-mono text-xs text-faint">
+                                    {s.note}
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiers -->
+    <section id="tiers" class="border-t border-white/10">
+        <div class="mx-auto max-w-6xl px-6 py-20">
+            <div class="grid gap-12 md:grid-cols-12">
+                <div class="md:col-span-4">
+                    <div class="small-headline">/tiers</div>
+                    <p class="mt-3 text-muted">
+                        Three tiers. Pick one, or pair it with an add-on for
+                        more visibility.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+                {
+                    tiers.map((tier) => (
+                        <div
+                            class={`flex flex-col rounded-2xl border bg-gradient-to-b ${tierAccent[tier.accent]} p-6`}
+                        >
+                            <div class="flex items-baseline justify-between">
+                                <div class="font-display text-3xl font-bold uppercase tracking-tight">
+                                    {tier.name}
+                                </div>
+                                <div class="font-mono text-xs uppercase text-faint">
+                                    {tier.slots}
+                                </div>
+                            </div>
+                            <div class="mt-4 text-3xl">{tier.price}</div>
+                            <div class="mt-1 font-mono text-xs uppercase text-muted">
+                                {tier.tickets} included
+                            </div>
+                            <ul class="mt-6 space-y-3 text-sm leading-relaxed">
+                                {tier.perks.map((perk) => (
+                                    <li class="flex gap-2">
+                                        <span class="mt-1 font-mono text-xs text-faint">
+                                            &rarr;
+                                        </span>
+                                        <span>{perk}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                            <a
+                                href={`mailto:sponsors@lisbonai.xyz?subject=${encodeURIComponent(`Lisbon AI 2026 sponsorship — ${tier.name}`)}`}
+                                class="mt-6 inline-block self-start rounded-full bg-cream-warm px-4 py-2 text-sm text-ink hover:bg-cream"
+                            >
+                                Reserve {tier.name} &rarr;
+                            </a>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
+            <div class="md:col-span-4">
+                <div class="small-headline">/add-ons</div>
+                <p class="mt-3 text-muted">
+                    Stack any of these on top of a tier &mdash; or sponsor
+                    just one moment of the event.
+                </p>
+            </div>
+            <ul class="md:col-span-8">
+                {
+                    addOns.map((a) => (
+                        <li class="border-b border-white/10 py-5">
+                            <div class="flex items-baseline justify-between gap-6">
+                                <div class="text-xl md:text-2xl">{a.name}</div>
+                                <div class="font-mono text-xs uppercase text-faint whitespace-nowrap">
+                                    {a.price}
+                                </div>
+                            </div>
+                            <p class="mt-2 max-w-xl text-sm text-muted">
+                                {a.description}
+                            </p>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="border-t border-white/10">
+        <div class="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-12">
+            <div class="md:col-span-4">
+                <div class="small-headline">/contact</div>
+            </div>
+            <div class="md:col-span-8">
+                <p class="max-w-2xl text-2xl leading-snug md:text-3xl">
+                    Want to be in the room? Reach out and we'll send the full
+                    prospectus &mdash; or just hop on a call.
+                </p>
+                <div class="mt-8">
+                    <a
+                        href="mailto:sponsors@lisbonai.xyz?subject=Lisbon%20AI%202026%20sponsorship"
+                        class="rounded-full bg-cream-warm px-6 py-3 text-ink hover:bg-cream"
+                    >
+                        sponsors@lisbonai.xyz &rarr;
+                    </a>
+                </div>
+                <p class="mt-6 font-mono text-xs uppercase text-faint">
+                    Lisbon AI runs at cost. Everything is invested in the
+                    experience or in reach.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</Layout>
