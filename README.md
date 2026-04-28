@@ -1,43 +1,16 @@
-# Astro Starter Kit: Minimal
+# Lisbon AI 2026 - Sponsor microsite
 
-```sh
-bun create astro@latest -- --template minimal
-```
+**Sponsor the room that builds AI.**
+September 23–24, 2026 · Centro Champalimaud, Belém · Lisbon, Portugal
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This is the source for [sponsors.lisbonai.xyz](https://sponsors.lisbonai.xyz) — the sponsorship microsite for Lisbon AI 2026. Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com). For the main event website source, see [lisbon-ai/website](https://github.com/lisbon-ai/website).
 
-## 🚀 Project Structure
+- [Sponsor microsite](https://sponsors.lisbonai.xyz)
+- [Main website](https://lisbonai.xyz)
+- [Email us](mailto:sponsors@lisbonai.xyz)
 
-Inside of your Astro project, you'll see the following folders and files:
+## Get in touch
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Sponsor:** [sponsors@lisbonai.xyz](mailto:sponsors@lisbonai.xyz)
+- **Everything else:** [info@lisbonai.xyz](mailto:info@lisbonai.xyz)
+- **Hang out:** [@lisbonai_](https://x.com/lisbonai_) on X, and [our Discord](https://discord.gg/ExnMf8wTPU)
