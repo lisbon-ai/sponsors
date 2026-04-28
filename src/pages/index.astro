@@ -46,6 +46,29 @@ const tierAccent: Record<string, string> = {
         </div>
     </section>
 
+    <!-- 2025 recap video -->
+    <section class="border-t border-white/10">
+        <div class="mx-auto max-w-6xl px-6 py-16">
+            <div class="small-headline mb-6">/2025-recap</div>
+            <video
+                class="aspect-video w-full rounded-2xl bg-black/40"
+                controls
+                preload="metadata"
+                playsinline
+                poster={`${import.meta.env.BASE_URL}hero-poster.jpg`}
+            >
+                <source
+                    src={`${import.meta.env.BASE_URL}hero-h265.mp4`}
+                    type='video/mp4; codecs="hvc1"'
+                />
+                <source
+                    src={`${import.meta.env.BASE_URL}hero.mp4`}
+                    type='video/mp4; codecs="avc1.640033"'
+                />
+            </video>
+        </div>
+    </section>
+
     <!-- The pitch -->
     <section class="border-t border-white/10">
         <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-12">
