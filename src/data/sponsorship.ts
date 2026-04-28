@@ -134,7 +134,7 @@ export const reachStats = [
 export const eventDetails = [
     { label: "Date", value: "September 23 – 24, 2026" },
     { label: "Location", value: "Champalimaud, Belém (Lisbon)" },
-    { label: "Format", value: "2 days · talks, interviews & pitch" },
+    { label: "Format", value: "2 days · talks, interviews & demos" },
     { label: "Capacity", value: "400 attendees" },
     { label: "Audience", value: "Engineers, founders, researchers" },
 ];
